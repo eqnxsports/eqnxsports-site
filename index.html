@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equinox Sports Solutions — Strategic Communications in Sport</title>
-  <meta name="description" content="Equinox Sports Solutions — Octagon-inspired, premium strategic communications and partnerships advisory for the sports industry." />
+  <title>Equinox Sports Solutions — Strategy. Communication. Identity.</title>
+  <meta name="description" content="Equinox Sports Solutions — London-based advisory shaping brand, partnerships, and communication in sport." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- NAV -->
   <header class="nav">
     <div class="container nav__inner">
       <a class="brand" href="#top" aria-label="Equinox Sports Solutions">
@@ -20,150 +21,96 @@
       <nav class="nav__links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="mailto:contact@eqnxsports.co.uk" class="btn btn--outline">Get in touch</a>
+        <a href="#contact" class="btn btn--outline">Get in touch</a>
       </nav>
     </div>
   </header>
 
-  <section id="top" class="hero" aria-labelledby="hero-title">
-    <div class="hero__bg">
-      <video id="heroVideo" class="hero__video" playsinline muted loop autoplay poster="assets/img/hero-poster.jpg">
-        <source src="assets/video/hero.webm" type="video/webm" />
-        <source src="assets/video/hero.mp4" type="video/mp4" />
-      </video>
-      <div class="hero__gradient" aria-hidden="true"></div>
-      <div class="hero__veil" aria-hidden="true"></div>
-    </div>
-    <div class="container hero__content">
-      <h1 id="hero-title" class="display">Where <span class="grad">strategy</span> meets <span class="grad">performance</span>.</h1>
-      <p class="kicker">London-based advisory building brands, partnerships, and communications in sport.</p>
+  <!-- HERO (centered, liquid gradient bg, no veil) -->
+  <section id="top" class="hero">
+    <div class="hero__gradient" aria-hidden="true"></div>
+    <div class="container hero__content center">
+      <h1 class="display hero__title">
+        <span class="brandline">EQUINOX SPORTS SOLUTIONS</span>
+        <span class="muted">Strategy. <span class="grad">Communication</span>. <span class="grad">Identity</span>.</span>
+        <span class="muted">For those who <span class="grad">move the game forward</span>.</span>
+      </h1>
       <div class="hero__cta">
-        <a class="btn btn--primary" href="mailto:contact@eqnxsports.co.uk">Get in touch</a>
-        <a class="btn btn--ghost" href="#services">What we do</a>
+        <a class="btn btn--primary" href="mailto:contact@eqnxsports.co.uk">contact@eqnxsports.co.uk</a>
+        <a class="btn btn--ghost" href="#services">Explore work</a>
       </div>
     </div>
   </section>
 
-  <section id="about" class="slice slice--dark">
-    <div class="container reveal">
+  <!-- ABOUT -->
+  <section id="about" class="slice">
+    <div class="container narrow reveal center">
       <h2 class="eyebrow">About</h2>
-      <div class="manifest">
-        <p>We craft <strong>strategic communications</strong> and <strong>brand architecture</strong> for athletes, clubs, and sports ventures.</p>
-        <p>We align message, identity, and partnerships — so ambition becomes momentum.</p>
-        <p>Clarity, credibility, consistency. That’s how brands in sport grow.</p>
-      </div>
+      <p class="lead xl">We build <span class="grad">identities that perform</span>.</p>
+      <p class="body lg">Based in London, we work with athletes, clubs and brands to create presence, credibility and alignment between what they do, say and stand for.</p>
     </div>
   </section>
 
-  <section id="services" class="slice">
+  <!-- SERVICES -->
+  <section id="services" class="slice slice--alt">
     <div class="container">
       <h2 class="eyebrow center">Services</h2>
       <div class="pillars">
         <div class="pillar reveal">
-          <h3>Brand Strategy &amp; Positioning</h3>
-          <p>Identity systems, message architecture, and presence — built for the pace of sport.</p>
+          <h3><span class="grad">Brand Strategy &amp; Narrative</span></h3>
+          <p>Defining how your brand lives on and off the pitch — from values to visual tone.</p>
         </div>
         <div class="pillar reveal">
-          <h3>Partnership Advisory</h3>
-          <p>Structuring sponsorships and collaborations with governance awareness and long-term value.</p>
+          <h3><span class="grad">Sponsorship &amp; Partnerships</span></h3>
+          <p>Structuring collaborations that make sense — commercially and ethically.</p>
         </div>
         <div class="pillar reveal">
-          <h3>Athlete Communications</h3>
-          <p>Playbooks, content frameworks, and media readiness — without account management.</p>
+          <h3><span class="grad">Reputation &amp; Communication</span></h3>
+          <p>Guiding how talent speaks, presents, and engages with global audiences.</p>
         </div>
         <div class="pillar reveal">
-          <h3>ESG &amp; Impact Alignment</h3>
-          <p>Sustainability narratives and governance alignment for clubs, projects, and investors.</p>
+          <h3><span class="grad">Governance &amp; ESG Advisory</span></h3>
+          <p>Aligning purpose with performance across sport and investment.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slice slice--video">
-    <div class="container grid2">
-      <div class="video-card reveal">
-        <div class="ratio">
-          <video class="inline-video" controls preload="metadata" poster="assets/img/reel-poster.jpg">
-            <source src="assets/video/case-reel.webm" type="video/webm" />
-            <source src="assets/video/case-reel.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <p class="caption">Showreel / Case snapshot</p>
-      </div>
-      <div class="reel-copy reveal">
-        <h3>Clarity in motion</h3>
-        <p>Short-form reels to showcase your identity, values, and performance — with the precision of a global sports brand.</p>
-        <ul class="checklist">
-          <li>MP4 + WebM for full browser support</li>
-          <li>Muted autoplay for backgrounds, controls for cases</li>
-          <li>Lightweight, mobile-first delivery</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="slice slice--dark">
+  <!-- CONTACT -->
+  <section id="contact" class="slice">
     <div class="container grid2">
       <div class="reveal">
         <h2 class="eyebrow">Contact</h2>
-        <p class="lead">Let’s create something extraordinary.</p>
+        <p class="lead xl">Let’s <span class="grad">create something extraordinary</span>.</p>
         <a class="btn btn--primary" href="mailto:contact@eqnxsports.co.uk">contact@eqnxsports.co.uk</a>
       </div>
       <div class="card reveal">
-        <h3>Details</h3>
-        <p><strong>Equinox Sports Solutions Ltd</strong><br/>Registered in England &amp; Wales<br/>Company No. 16773982</p>
-        <p>Registered office:<br/>86–90 Paul Street<br/>London, EC2A 4NE, United Kingdom</p>
+        <h3>London HQ</h3>
+        <p>86–90 Paul Street, EC2A 4NE<br/>United Kingdom</p>
+        <p class="small dim">Equinox Sports Solutions Ltd — Registered in England &amp; Wales · Company No. 16773982</p>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER (legal links at the bottom) -->
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span id="year"></span> Equinox Sports Solutions Ltd · Company No. 16773982 · Registered office: 86–90 Paul Street, London, EC2A 4NE, United Kingdom</p>
       <nav class="footer__links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <span aria-hidden="true">•</span>
         <a href="privacy.html">Privacy Notice</a>
         <span aria-hidden="true">•</span>
         <a href="cookies.html">Cookies Notice</a>
-        <span aria-hidden="true">•</span>
-        <a href="terms.html">Terms &amp; Conditions</a>
       </nav>
     </div>
   </footer>
 
-  <div id="cookies-banner" class="cookies-banner" role="dialog" aria-live="polite" aria-label="Cookies notice" hidden>
-    <div class="cookies-inner">
-      <span>🍪 We use minimal cookies. Read our <a href="cookies.html">Cookies Notice</a>.</span>
-      <div class="cookies-actions">
-        <button id="cookies-reject" class="btn btn--outline">Reject</button>
-        <button id="cookies-accept" class="btn btn--primary">Accept</button>
-      </div>
-    </div>
-  </div>
-
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      const v = document.getElementById('heroVideo');
-      if(!v) return;
-      const fail = () => document.body.classList.add('no-hero-video');
-      v.play().catch(fail);
-      v.addEventListener('error', fail);
-      const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-      if (mq.matches) v.pause();
-    })();
-    (function(){
-      try{
-        const key='eqnx_cookies_choice';
-        const banner=document.getElementById('cookies-banner');
-        const choice=localStorage.getItem(key);
-        if(!choice){ banner.hidden=false; }
-        const accept=document.getElementById('cookies-accept');
-        const reject=document.getElementById('cookies-reject');
-        function setChoice(val){ localStorage.setItem(key,val); banner.hidden=true; }
-        accept && accept.addEventListener('click',()=>setChoice('accepted'));
-        reject && reject.addEventListener('click',()=>setChoice('rejected'));
-      }catch(e){}
-    })();
+
+    // Reveal on scroll
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
     },{threshold:0.12});
