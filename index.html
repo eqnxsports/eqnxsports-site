@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equinox Sports Solutions | EQNX</title>
+  <meta name="description" content="Equinox Sports Solutions (EQNX) — strategy & communications advisory for the global sports industry." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Equinox Sports Solutions Home">
+        <span class="brand__eqnx">EQUINOX</span>
+        <span class="brand__sub">SPORTS&nbsp;SOLUTIONS</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="mailto:contact@eqnxsports.co.uk" class="btn btn--outline">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with video background and fluid gradient fallback -->
+  <section id="top" class="hero" aria-labelledby="hero-title">
+    <div class="hero__media" aria-hidden="true">
+      <video id="heroVideo" class="hero__video" playsinline muted loop autoplay poster="assets/img/fluid-bg.jpg">
+        <source src="assets/video/hero.webm" type="video/webm" />
+        <source src="assets/video/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="hero__gradient"></div>
+    </div>
+    <div class="container hero__content">
+      <h1 id="hero-title" class="headline gradient-text">Strategic Advisory in Sport</h1>
+      <p class="subtitle">We design strategy, structure partnerships, and elevate communications for clubs, agencies, and investors.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="mailto:contact@eqnxsports.co.uk">Get in Touch</a>
+        <a class="btn btn--ghost" href="#services">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container grid2">
+      <div>
+        <h2 class="section__title">About</h2>
+        <p class="lead">Equinox Sports Solutions is a London-based strategic advisory shaping the future of sport through insight, structure, and communication.</p>
+        <p>We work with clubs, agencies, and private investors to design strategies that elevate brands, strengthen partnerships, and turn ambition into long-term value.</p>
+        <p class="tagline">Driven by strategy. Defined by precision.</p>
+      </div>
+      <div class="card">
+        <h3>Why EQNX</h3>
+        <ul class="checklist">
+          <li>Clear positioning for global sports markets</li>
+          <li>Actionable strategy & governance frameworks</li>
+          <li>Communication playbooks that build trust</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title center">Services</h2>
+      <div class="cards3">
+        <div class="card">
+          <h3>Strategy</h3>
+          <p>Competitive positioning, market entry, and growth plans for clubs, agencies, and investors in sport.</p>
+        </div>
+        <div class="card">
+          <h3>Partnerships</h3>
+          <p>Structuring collaborations and value exchanges that last — from scouting partners to media, brands, and rights-holders.</p>
+        </div>
+        <div class="card">
+          <h3>Communications</h3>
+          <p>Narratives, announcements, and stakeholder materials that align governance, brand, and outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insertable video section (case or reel) -->
+  <section class="section video-block">
+    <div class="container grid2">
+      <div class="video-card">
+        <div class="ratio">
+          <video class="inline-video" controls preload="metadata" poster="assets/img/fluid-bg.jpg">
+            <source src="assets/video/case-reel.webm" type="video/webm" />
+            <source src="assets/video/case-reel.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="caption">Showreel / Case snapshot</p>
+      </div>
+      <div>
+        <h3>Clarity in Motion</h3>
+        <p>Use this area to showcase a short case video, a motion background, or an animated gradient cut that reflects the EQNX identity. The block accepts WebM/MP4 and will gracefully fallback if video isn’t loaded.</p>
+        <ul class="checklist">
+          <li>MP4 + WebM for cross-browser support</li>
+          <li>Autoplay muted for background reels</li>
+          <li>Manual controls for case studies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section--tight">
+    <div class="container grid2">
+      <div>
+        <h2 class="section__title">Contact</h2>
+        <p>Prefer email — we’ll respond quickly.</p>
+        <div class="stack">
+          <a class="btn btn--primary" href="mailto:contact@eqnxsports.co.uk">Email contact@eqnxsports.co.uk</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Registered Office</h3>
+        <p>London, United Kingdom</p>
+        <p class="small">Equinox Sports Solutions is independent and not affiliated with Equinox Holdings, Inc. or its subsidiaries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Equinox Sports Solutions Ltd · Company No. 16773982 · Registered office: 86–90 Paul Street, London, EC2A 4NE, United Kingdom · All rights reserved.</p>
+      <nav class="footer__links">
+        <a href="privacy.html">Privacy Notice</a>
+        <span aria-hidden="true">|</span>
+        <a href="cookies.html">Cookies Notice</a>
+        <span aria-hidden="true">|</span>
+        <a href="terms.html">Terms & Conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Cookies Banner -->
+  <div id="cookies-banner" class="cookies-banner" role="dialog" aria-live="polite" aria-label="Cookies notice" hidden>
+    <div class="cookies-inner">
+      <span>🍪 This website uses minimal cookies to improve your experience. Read our <a href="cookies.html">Cookies Notice</a>.</span>
+      <div class="cookies-actions">
+        <button id="cookies-reject" class="btn btn--outline">Reject</button>
+        <button id="cookies-accept" class="btn btn--primary">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // If hero video can't autoplay (iOS/low power), hide it and rely on gradient
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo) {
+      const onFail = () => document.body.classList.add('no-hero-video');
+      heroVideo.play().catch(onFail);
+      heroVideo.addEventListener('error', onFail);
+      const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mq.matches) heroVideo.pause();
+    }
+
+    // Cookies banner
+    (function(){
+      try{
+        const key='eqnx_cookies_choice';
+        const banner=document.getElementById('cookies-banner');
+        const choice=localStorage.getItem(key);
+        if(!choice){ banner.hidden=false; }
+        const accept=document.getElementById('cookies-accept');
+        const reject=document.getElementById('cookies-reject');
+        function setChoice(val){ localStorage.setItem(key,val); banner.hidden=true; }
+        accept && accept.addEventListener('click',()=>setChoice('accepted'));
+        reject && reject.addEventListener('click',()=>setChoice('rejected'));
+      }catch(e){/* no-op */}
+    })();
+  </script>
+</body>
+</html>
