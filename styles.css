@@ -1,93 +1,198 @@
-/* EQNX v3.1 — Octagon-scale type, gradient emphasis, centered hero */
 :root{
-  --eqnx-blue:#2F7BFF;
-  --eqnx-violet:#6C3BF5;
-  --eqnx-ice:#12EAEA;
-  --eqnx-coral:#FF7A6E;
-  --bg:#05070C;
-  --text:#F0F3FA;
-  --text-dim:#C3CCE0;
-  --stroke:rgba(255,255,255,.14);
+  --bg:#040712; --text:#F2F5FB; --text-dim:#C7D0E6; --muted:#9AA4C3;
+  --pink:#ff5757; --violet:#8c52ff; --ice:#5de0e6;
+  --logo-h:54px; --header-pad-y:10px;
 }
 
-*{box-sizing:border-box}
+/* Base */
 html,body{height:100%}
-body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#000;color:var(--text);line-height:1.5}
-a{text-decoration:none;color:inherit}
-
-.container{width:min(1200px,92%);margin-inline:auto}
-.narrow{max-width:980px}
-
-.nav{position:sticky;top:0;z-index:50;background:rgba(5,7,12,.55);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--stroke)}
-.nav__inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.brand{display:flex;flex-direction:column}
-.brand__eqnx{font-weight:900;letter-spacing:.08em;font-size:1.15rem;background:linear-gradient(90deg,var(--eqnx-blue),var(--eqnx-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-.brand__sub{font-size:.75rem;letter-spacing:.12em;color:var(--text-dim)}
-.nav__links a{color:var(--text);margin-left:22px;font-weight:700;opacity:.95}
-.nav__links .btn{margin-left:18px}
-
-/* Buttons */
-.btn{display:inline-block;padding:14px 20px;border-radius:999px;border:1px solid var(--stroke);font-weight:800;color:#fff;transition:.2s ease}
-.btn--primary{border-color:transparent;background:linear-gradient(90deg,var(--eqnx-blue),var(--eqnx-violet))}
-.btn--primary:hover{transform:translateY(-1px);filter:saturate(110%)}
-.btn--outline{background:transparent}
-.btn--ghost{background:transparent;border-color:transparent}
-
-/* Gradient emphasis */
-.grad{background:linear-gradient(90deg,var(--eqnx-blue),var(--eqnx-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-/* Hero */
-.hero{position:relative;min-height:90vh;display:grid;align-items:center;overflow:hidden}
-.hero__gradient{position:absolute;inset:-25%;filter:blur(52px);animation:breath 18s ease-in-out infinite alternate;
-  background:
-    radial-gradient(60% 45% at 20% 30%, rgba(47,123,255,.32) 0%, transparent 60%),
-    radial-gradient(50% 40% at 72% 65%, rgba(108,59,245,.36) 0%, transparent 60%),
-    radial-gradient(42% 36% at 35% 80%, rgba(18,234,234,.22) 0%, transparent 60%),
-    radial-gradient(32% 30% at 85% 20%, rgba(255,122,110,.18) 0%, transparent 60%);
+body{
+  margin:0; color:var(--text); background:var(--bg);
+  font-family:"Helvetica Neue","Anton",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.5;
+  background-image:url("assets/img/site-bg.webp");
+  background-size:cover; background-repeat:no-repeat; background-attachment:fixed;
+  background-position:center top;
 }
-@keyframes breath{0%{transform:translate3d(-2%,2%,0) scale(1)}100%{transform:translate3d(2%,-2%,0) scale(1.04)}}
-.hero__content{position:relative;z-index:2;padding:110px 0}
-.center{text-align:center}
-.display{font-size:clamp(3rem,8.6vw,6.5rem);line-height:1.02;margin:0 0 18px;font-weight:900;letter-spacing:-.01em}
-.hero__title .brandline{display:block;margin-bottom:10px;letter-spacing:.08em}
-.hero__title .muted{display:block;color:var(--text-dim);font-weight:700}
-.hero__cta .btn{margin:12px 10px 0}
+.wrap{max-width:1180px; margin:0 auto; padding:0 20px}
+section{padding:72px 0}
 
-/* Sections */
-.slice{padding:110px 0;background:var(--bg);color:var(--text)}
-.slice--alt{background:linear-gradient(180deg,var(--bg),#0B1020)}
-.eyebrow{letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim);font-size:1.05rem;margin:0 0 14px}
-.lead{font-size:1.45rem;margin:.3rem 0 10px}
-.lead.xl{font-size:1.65rem}
-.body{font-size:1.12rem;color:var(--text-dim)}
-.body.lg{font-size:1.18rem}
+/* Header (compact, big logo inside) */
+.header{position:sticky; top:0; z-index:50;
+  background:linear-gradient(to bottom, rgba(4,7,18,.9), rgba(4,7,18,.55) 65%, rgba(4,7,18,0));
+  backdrop-filter:blur(6px)}
+.header__row{display:flex; align-items:center; justify-content:space-between; padding:var(--header-pad-y) 0}
+.logo{height:var(--logo-h); width:auto; display:block}
+.nav{display:flex; align-items:center; gap:22px}
+.nav a{color:var(--text); text-decoration:none; opacity:.95; font-size:17px}
+.nav .cta{padding:8px 16px; border-radius:999px; white-space:nowrap;
+  background:linear-gradient(90deg,var(--pink),var(--violet)); color:#fff; font-weight:800; font-size:17px; text-decoration:none}
+@media (max-width:560px){
+  :root{ --logo-h:40px; --header-pad-y:8px }
+  .nav a:not(.cta){display:none}
+  .nav .cta{font-size:16px; padding:8px 14px}
+}
 
-/* Grid + Cards */
-.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:32px}
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:22px}
-.pillar{border:1px solid var(--stroke);border-radius:20px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));min-height:190px}
-.pillar h3{margin:0 0 8px;font-size:1.28rem}
-.pillar p{margin:0;color:var(--text-dim);font-size:1.04rem}
-.card{border:1px solid var(--stroke);border-radius:20px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00))}
-.small{font-size:1rem}
-.dim{color:#AAB4CB}
+/* Hero video — no dim at all */
+.hero{position:relative; min-height:74vh; display:grid; place-items:center; overflow:hidden}
+.hero video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:none; opacity:1}
+
+/* Headings (gradient) */
+h2{margin:0 0 14px; font-weight:800; letter-spacing:.2px; line-height:1.1; font-size:52px}
+.grad-text{
+  background:linear-gradient(90deg,var(--pink),var(--violet),var(--ice));
+  -webkit-background-clip:text; background-clip:text; color:transparent
+}
+.underline{
+  height:2px; width:100%; max-width:560px;
+  background:linear-gradient(90deg,var(--pink),var(--violet),var(--ice));
+  border-radius:2px; margin:12px 0 28px
+}
+p{font-size:20px; color:var(--text-dim); margin:0 0 18px}
+.lead{font-size:22px}
+
+/* Formula (centered, crisp ×) */
+.approach{margin:26px 0 6px; text-align:center}
+.formula{display:inline-block; font-size:36px; font-weight:800; line-height:1.05;
+  background:linear-gradient(90deg,var(--pink),var(--violet),var(--ice));
+  -webkit-background-clip:text; background-clip:text; color:transparent}
+
+/* Services — accordion with light gradient */
+.services{display:grid; gap:14px}
+.svc{
+  border:1px solid rgba(255,255,255,.10);
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.00));
+  border-radius:14px; padding:6px 14px 10px;
+}
+.svc__head{display:flex; align-items:center; justify-content:space-between; cursor:pointer; gap:14px; padding:10px 6px}
+.svc__head h3{margin:0; font-size:24px; font-weight:800}
+.chip{
+  background:linear-gradient(90deg,var(--pink),var(--violet)); -webkit-background-clip:text; color:transparent}
+.chev{opacity:.8; transition:.2s transform ease}
+.svc[open] .chev{transform:rotate(180deg)}
+.svc__body{padding:8px 6px 14px; color:var(--text-dim)}
+.svc__body ul{margin:8px 0 0; padding:0; list-style:none}
+.svc__body li{margin:6px 0; font-size:18px}
+.svc:hover{box-shadow:0 0 26px rgba(140,82,255,.18); border-color:rgba(255,255,255,.18)}
+
+/* Reach / CTA block */
+.reach{position:relative; overflow:hidden; border-radius:18px;
+  background: url("assets/img/hero-bg.png") center/cover no-repeat, radial-gradient(1200px 400px at 25% 0%, rgba(255,87,87,.2), transparent 60%), radial-gradient(1200px 400px at 85% 100%, rgba(140,82,255,.2), transparent 60%), #0a0f1c;
+  padding:56px 28px; text-align:center}
+.reach h2{font-size:44px; margin-bottom:16px}
+.cta-mail{display:inline-block; padding:12px 18px; border-radius:999px; background:linear-gradient(90deg,var(--pink),var(--violet)); color:#fff; font-weight:800; text-decoration:none}
+
+/* Contact */
+.contact-grid{display:grid; grid-template-columns:1.3fr .9fr; gap:28px}
+.contact h3{margin:0 0 10px; font-size:36px; font-weight:800; color:#fff}
+.mail{color:#fff; font-weight:800; text-decoration:underline}
+.soc{display:flex; gap:14px; margin-top:12px}
+.soc a{display:inline-flex; width:auto; height:auto; line-height:0}
+.soc svg{width:24px; height:24px; display:block; fill:#fff}
+.hq{border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:18px}
+.hq h4{margin:0 0 8px; font-size:22px; color:#fff; font-weight:800}
+.hq p{margin:0; font-size:16px}
 
 /* Footer */
-.footer{background:#04060B;color:#C9D2EA;padding:34px 0;border-top:1px solid var(--stroke)}
-.footer__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.footer__links a{color:#EAF0FF;font-weight:800}
-.footer__links span{opacity:.6}
-.footer p{font-size:1.08rem}
+footer{color:var(--text-dim); font-size:14px; padding:28px 0 40px}
+.foot-links{display:flex; gap:18px; flex-wrap:wrap; margin-top:8px}
+.foot-links a{color:var(--text-dim); text-decoration:none}
+.foot-links a:hover{text-decoration:underline}
 
-/* Reveal */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-
-/* Responsive */
-@media (max-width:1100px){ .pillars{grid-template-columns:repeat(2,1fr)} .grid2{grid-template-columns:1fr} }
-@media (max-width:700px){
-  .nav__links{display:none}
-  .pillars{grid-template-columns:1fr}
-  .display{font-size:clamp(2.4rem,10vw,3.6rem)}
-  .lead{font-size:1.25rem}
+/* Cookies — centered & compact */
+.cookie-banner{
+  position:fixed; left:50%; transform:translateX(-50%);
+  bottom:18px; z-index:1000; width:min(560px, calc(100% - 28px));
+  background:rgba(10,14,25,.92); color:var(--text);
+  border:1px solid rgba(255,255,255,.08); border-radius:12px;
+  padding:12px 14px; display:none; gap:10px; backdrop-filter:blur(6px)
 }
+.cookie-row{display:flex; align-items:center; gap:8px; justify-content:center}
+.cookie-ico{font-size:16px}
+.cookie-text{text-align:center}
+.cookie-actions{display:flex; gap:8px; justify-content:center; margin-top:8px}
+.btn{padding:8px 12px; border-radius:10px; cursor:pointer; border:none; font-weight:800; font-size:14px}
+.cookie-accept{background:linear-gradient(90deg,var(--pink),var(--violet)); color:#fff}
+.cookie-reject{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.2)}
+
+/* === Patch: Legal pages use the same background and style as homepage === */
+body.legal {
+  background: var(--bg);
+  color: var(--text);
+  background-image:
+    radial-gradient(1200px 600px at 25% 0%, rgba(255,87,87,.15), transparent 70%),
+    radial-gradient(1200px 600px at 85% 100%, rgba(140,82,255,.15), transparent 70%),
+    url("assets/img/site-bg.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+body.legal .wrap,
+body.legal .prose,
+body.legal section {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background: rgba(10, 14, 25, 0.55);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+/* Preserve line breaks for imported legal texts */
+.prose { 
+  white-space: pre-wrap; 
+}
+
+/* === Patch: Text-based social links (instead of SVG icons) === */
+.social-links a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.soc {
+  display: block;
+  margin-top: 12px;
+}
+
+.soc a {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  line-height: 1.4;
+  color: #fff;
+  text-decoration: underline;
+  margin-right: 12px;
+}
+
+/* === Patch: Footer and mobile adjustments === */
+footer.wrap {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-top: 60px;
+}
+
+footer.wrap .foot-links {
+  margin-top: 8px;
+}
+
+footer.wrap .foot-links a {
+  color: var(--text-dim);
+  text-decoration: underline;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+
+/* === Patch: Mobile layout improvements === */
+@media (max-width: 768px) {
+  .wrap { padding: 16px; }
+  h2 { font-size: 34px; }
+  .reach h2 { font-size: 32px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .social-links a { margin: 4px 12px; }
+  footer.wrap .foot-links { display: flex; flex-direction: column; gap: 6px; }
+}
+

@@ -1,23 +1,73 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Terms & Conditions | Equinox Sports Solutions</title>
-<link href="styles.css" rel="stylesheet">
-</head><body>
-<header class="nav"><div class="container nav__inner"><a class="brand" href="index.html">
-<span class="brand__eqnx">EQUINOX</span><span class="brand__sub">SPORTS&nbsp;SOLUTIONS</span></a></div></header>
-<section class="slice"><div class="container">
-<h1 class="display" style="font-size:2.2rem;margin-bottom:10px;">Terms &amp; Conditions</h1>
-<p class="lead">This website provides general information only. It does not constitute advice. Content may change without notice.</p>
-<h3 class="eyebrow" style="margin-top:24px">Intellectual property</h3>
-<p>© Equinox Sports Solutions Ltd. All rights reserved. You may not reproduce site content without permission.</p>
-<h3 class="eyebrow" style="margin-top:16px">Liability</h3>
-<p>We are not liable for loss arising from use of this site, to the fullest extent permitted by law.</p>
-<h3 class="eyebrow" style="margin-top:16px">Contact</h3>
-<p>For enquiries please email <a class="btn btn--outline" href="mailto:contact@eqnxsports.co.uk">contact@eqnxsports.co.uk</a>.</p>
-</div></section>
-<footer class="footer"><div class="container footer__inner">
-<p>© <span id="year"></span> Equinox Sports Solutions Ltd · Company No. 16773982 · Registered office: 86–90 Paul Street, London, EC2A 4NE, United Kingdom</p>
-<nav class="footer__links"><a href="privacy.html">Privacy</a><span>•</span><a href="cookies.html">Cookies</a><span>•</span><a href="terms.html">Terms</a></nav>
-</div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Terms &amp; Conditions | Equinox Sports Solutions</title>
+  <link rel="stylesheet" href="styles.css?v=100" />
+</head>
+<body class="legal">
+
+  <header class="header">
+    <div class="wrap header__row">
+      <a href="index.html" aria-label="Equinox home">
+        <img src="assets/img/logo-equinox.svg" alt="Equinox Sports Solutions" class="logo">
+      </a>
+      <nav class="nav">
+        <a href="privacy.html">Privacy</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="wrap prose">
+    <h1>Terms &amp; Conditions</h1>
+    <div class="muted"><em>Last updated: November 2025</em></div>
+
+    <h2>1. About Us</h2>
+    <p>This website (“Site”) is operated by Equinox Sports Solutions Ltd, a company registered in England and Wales under company number 16773982.<br>
+    Registered office: 86–90 Paul Street, London, United Kingdom, EC2A 4NE.<br>
+    Email: <a href="mailto:contact@eqnxsports.co.uk">contact@eqnxsports.co.uk</a>.</p>
+    <p>By accessing or using this Site, you agree to comply with these Terms &amp; Conditions (“Terms”). If you do not agree, please refrain from using this Site.</p>
+
+    <h2>2. Purpose of the Site</h2>
+    <p>This Site provides information about the services, projects, and publications of Equinox Sports Solutions Ltd. It is intended for general informational and promotional purposes only and does not constitute legal, financial, or professional advice.</p>
+
+    <h2>3. Intellectual Property</h2>
+    <p>All content on this Site, including text, graphics, branding, logos, design elements, and images, is the property of Equinox Sports Solutions Ltd or its respective owners and is protected by copyright and trademark laws. You may not copy, reproduce, or distribute any material from the Site without prior written permission from Equinox Sports Solutions Ltd.</p>
+
+    <h2>4. Use of Information</h2>
+    <p>You may view, download, or share links to our public materials (such as articles, insights, or case studies) for personal or professional use, provided you do not modify or misrepresent their source. Attribution (“© Equinox Sports Solutions Ltd”) must be retained in all reproductions.</p>
+
+    <h2>5. External Links</h2>
+    <p>This Site may contain links to third-party websites or social media accounts (including LinkedIn and Instagram). We are not responsible for the content, accuracy, or privacy practices of any external sites.</p>
+
+    <h2>6. Communications</h2>
+    <p>We may communicate with you through email, LinkedIn, or WhatsApp Business in the course of providing services or responding to enquiries. We do not use these channels for unsolicited marketing. All communications comply with the UK GDPR and Data Use and Accuracy Act (DUAA).</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>While we strive to ensure that all content on this Site is accurate and up to date, Equinox Sports Solutions Ltd makes no warranties or representations of any kind regarding completeness or suitability for any purpose. We shall not be liable for any loss, damage, or inconvenience arising from reliance on the information provided here.</p>
+
+    <h2>8. Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the English courts.</p>
+
+    <h2>9. Updates</h2>
+    <p>We may revise these Terms from time to time to reflect operational, legal, or regulatory changes. The updated version will be posted on this page with the new “Last updated” date.</p>
+  </section>
+
+  <footer class="wrap">
+    <div>© <span id="year"></span> Equinox Sports Solutions Ltd · Company No. 16773982 · Registered in England &amp; Wales</div>
+    <div class="foot-links">
+      <a href="privacy.html">Privacy Notice</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
